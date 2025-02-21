@@ -16,10 +16,11 @@ pipeline {
                 echo 'Test Step: We run testing tool like pytest here'
 
                 # TODO fill out the path to conda here
-                /Users/zhangzhixian/opt/anaconda3 init
+                source /Users/zhangzhixian/opt/anaconda3/etc/profile.d/conda.sh
 
                 # TODO Complete the command to run pytest
-                /Users/zhangzhixian/opt/anaconda3 run -n mlprodlab pytest
+                conda activate mlprodlab 
+                pytest test_utility.py
 
 
                 '''
